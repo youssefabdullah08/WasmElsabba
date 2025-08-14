@@ -1,0 +1,90 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-blanck-layout',
+  standalone: true,
+  imports: [],
+  templateUrl: './blanck-layout.component.html',
+  styleUrl: './blanck-layout.component.scss'
+})
+export class BlanckLayoutComponent {
+
+  hover:string="hover-effect-"
+  bg:string="bg-"
+  // Header
+  header = {
+    logo: './assets/Images/wasm alsiba Vertical PNG Logo.png',
+   
+  };
+  
+  menu = [
+    { label: 'الرئيسية', id: 'home' },
+    { label: 'الإحصائيات', id: 'stats' },
+    { label: 'الخدمات', id: 'services' },
+    { label: 'الخطوات', id: 'steps' },
+    { label: 'الأهداف', id: 'goals' },
+    { label: 'تواصل معنا', id: 'footer' }
+  ];
+  
+
+  // Hero
+  hero = {
+    title: 'نقود التحوّل نحو مستقبل أفضل',
+    subtitle: 'حلول مبتكرة وخدمات استشارية لدعم أهدافكم الاستراتيجية',
+    button: 'صوت الآن',
+    highlights: ['احترافية عالية', 'حلول مبتكرة', 'شراكات فاعلة']
+  };
+
+  // Stats
+  stats = [
+    { label: 'مشروعات مكتملة', value: '١٢٠+' },
+    { label: 'عملاء سعداء', value: '٣٠٠+' },
+    { label: 'برامج تدريبية', value: '٤٥' },
+    { label: 'شراكات', value: '٢٥' }
+  ];
+
+  // Services
+  services = [
+    { id: 1, title: 'الاستشارات الإدارية', desc: 'تحليل الفجوات، بناء الهياكل، وقياس الأداء' },
+    { id: 2, title: 'التحول الرقمي', desc: 'أتمتة العمليات ولوحات قياس الأداء' },
+    { id: 3, title: 'التدريب والتطوير', desc: 'برامج نوعية لبناء قدرات الفرق' },
+    { id: 4, title: 'إدارة المشاريع', desc: 'تخطيط وتنفيذ ورقابة متكاملة' },
+    { id: 5, title: 'التسويق والاتصال', desc: 'خطط تسويقية وإدارة محتوى' },
+    { id: 6, title: 'الحوكمة والامتثال', desc: 'سياسات ومعايير جودة' }
+  ];
+
+  // Steps
+  steps = [
+    '١. اكتشاف: فهم الأهداف وتحديد الأولويات',
+    '٢. تصميم: صياغة الحلول والخارطة التنفيذية',
+    '٣. تنفيذ: إطلاق المبادرات وإدارة التغيير',
+    '٤. تمكين: نقل المعرفة وبناء القدرات',
+    '٥. قياس: مؤشرات أداء وتحسين مستمر'
+  ];
+
+  // Goals
+  goals = {
+    vision: 'أن نكون الشريك الأكثر موثوقية لتحقيق الأثر المستدام',
+    mission: 'تمكين الجهات من تحقيق أهدافها عبر حلول عملية مبتكرة',
+    values: ['الموثوقية', 'الابتكار', 'الشفافية', 'التمكين'],
+    details: [
+      { title: 'تعظيم الأثر', points: ['رفع كفاءة العمليات', 'تحسين تجربة المستفيد'] },
+      { title: 'الاستدامة', points: ['حوكمة فعّالة', 'مؤشرات أداء واضحة'] },
+      { title: 'الشراكات', points: ['بناء تحالفات', 'نقل المعرفة'] }
+    ]
+  };
+
+  // CTA
+  cta = {
+    message: 'جاهز تبدأ؟ تواصل معنا الآن لتحقيق أهدافك',
+    phone: '+966-000-0000',
+    email: 'info@example.com'
+  };
+
+  // Footer
+  footer = {
+    year: new Date().getFullYear(),
+    company: 'منظمتنا',
+    links: ['الخصوصية', 'الشروط', 'الدعم']
+  };
+}

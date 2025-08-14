@@ -1,0 +1,213 @@
+<!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg position-static py-2 " style="backdrop-filter: blur(8px); background: rgba(255,255,255,0.95) !important;">
+  <div class="container justify-content-between">
+    <!-- Logo -->
+    <div>
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="#home">
+        <img [src]="header.logo" alt="Logo" class="me-2" style="height: 48px; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.08));">
+      </a>
+    </div>
+    <!-- Toggle Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Menu -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto gap-2">
+        @for (item of menu; track item) {
+          <li class="nav-item">
+            <a class="nav-link px-3 rounded-pill fw-semibold transition" [href]="'#' + item.id" style="transition: background 0.2s, color 0.2s;">
+              {{ item.label }}
+            </a>
+          </li>
+        }
+        <li>
+          <a href="" class="btn bg-sky rounded-pill px-4 py-2 fw-semibold shadow-sm" style="font-size: 1rem;"> شارك معنا</a>
+        </li>
+        <li>
+          <a href="#" class="btn btn-success btn-lg px-5 py-2 shadow rounded-pill" style="font-size: 1rem;">{{ hero.button }}</a>
+
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section id="home" class="py-5 text-center  vh-100 d-flex align-items-center justify-content-center bg-image position-relative" style="min-height: 600px;">
+  <div class="container position-relative z-2">
+    <h1 class="fw-bold display-4 mb-3 text-shadow" style="color: #1a237e; letter-spacing: 1px;">{{ hero.title }}</h1>
+    <p class="text-muted fs-4 mb-4">{{ hero.subtitle }}</p>
+    <div class="mt-4 d-flex flex-wrap justify-content-center gap-2">
+      @for (item of hero.highlights; track item ; let i =$index) {
+        <span [class]="bg+i" class="badge  m-1 px-4 py-3 rounded-pill fs-6 shadow-sm" style="font-weight: 500; font-size: 1.1rem;">{{ item }}</span>
+      }
+    </div>
+  </div>
+  <div class="position-absolute top-0 start-0 w-100 h-100 bg-gradient" ></div>
+</section>
+
+<!-- Stats -->
+<section id="stats" class="py-5 ">
+  <div class="container">
+    <div class="row text-center g-4">
+      @for (stat of stats; track stat) {
+        <div class="col-6 col-md-3 mb-3">
+          <div class="p-4 rounded-4 shadow-sm bg-white h-100 border border-2 border-primary-subtle">
+            <h2 class="text-sky fw-bold display-5 mb-2">{{ stat.value }}</h2>
+            <p class="text-muted fs-5 mb-0">{{ stat.label }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="py-5 bg-light mt-5 mt-4">
+  <div class="container">
+    <h2 class="text-center mb-5 display-6 fw-bold text-sky">خدماتنا</h2>
+    <div class="row g-4">
+      @for (item of services; track item; let i = $index) {
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-lg border-0 rounded-4 bg-white service-card position-relative overflow-hidden ">
+            <div class="card-body p-4 effect " [class]="hover+item.id">
+              <div class="mb-3">
+                <span class="d-inline-block bg-primary bg-opacity-10 text-primary rounded-circle p-3 mb-2">
+                  <i class="bi bi-lightbulb-fill fs-3"></i>
+                </span>
+              </div>
+              <h5 class="card-title fw-bold mb-2">{{ item.title }}</h5>
+              <p class="card-text text-muted fs-6">{{ item.desc }}</p>
+            </div>
+            <div class="position-absolute bottom-0 end-0 opacity-10" style="font-size: 5rem; pointer-events: none;">
+              <i class="bi bi-grid-3x3-gap-fill"></i>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Steps -->
+<section id="steps" class="py-5 bg-white mt-4">
+  <div class="container">
+    <h2 class="text-center mb-5 display-6 fw-bold text-sky">رحلة العمل معنا</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="timeline">
+          <ul class="list-unstyled d-flex flex-wrap justify-content-center gap-4">
+            @for (step of steps; track step; let i = $index) {
+              <li class="timeline-step position-relative px-4 py-3 mb-3 rounded-4 bg-light shadow-sm" style="min-width: 220px;">
+                <span  [class]="bg+i" class="badge  text-white rounded-circle position-absolute top-0 start-50 translate-middle"  >{{ i+1 }}</span>
+                <span class="d-block mt-4 fs-5">{{ step }}</span>
+              </li>
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Goals -->
+<section id="goals" class="py-5 bg-light mt-4">
+  <div class="container">
+    <h2 class="mb-4 display-6 fw-bold text-sky">الأهداف</h2>
+    <div class="row mb-4">
+      <div class="col-md-4 mb-3">
+        <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+          <p class="mb-2"><strong class="text-sky">الرؤية:</strong></p>
+          <p class="mb-0 text-muted">{{ goals.vision }}</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+          <p class="mb-2"><strong class="text-sky">الرسالة:</strong></p>
+          <p class="mb-0 text-muted">{{ goals.mission }}</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+          <p class="mb-2"><strong class="text-sky">القيم:</strong></p>
+          <div class="d-flex flex-wrap gap-2">
+            @for (value of goals.values; track value ; let i = $index) {
+              <span [class]="bg+i" class="badge  bg-opacity-75 fs-6 px-3 py-2 rounded-pill">{{ value }}</span>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-4 g-4">
+      @for (goal of goals.details; track goal) {
+        <div class="col-md-4">
+          <div class="card h-100 shadow-lg border-0 rounded-4 bg-white">
+            <div class="card-body p-4">
+              <h5 class="card-title fw-bold mb-3 text-sky">{{ goal.title }}</h5>
+              <ul class="ps-3">
+                @for (point of goal.points; track point) {
+                  <li class="mb-2 text-muted fs-6">{{ point }}</li>
+                }
+              </ul>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+
+
+<!-- Footer -->
+<footer class="bg-light text-center text-lg-start border-top pt-4 footer-rtl">
+  <div class="container">
+    <div class="row text-center text-md-end align-items-start">
+
+      <!-- Column 1 (Logo & About) -->
+      <div class="col-md-3 mb-4 text-md-end text-center">
+        <img src="./assets/Images/wasm alsiba Vertical PNG Logo.png" alt="Logo" class="mb-2" style="max-width: 120px;">
+        <p class="small text-muted mt-2">
+          جائزة تحفيزية لأفضل إنتاج إعلامي مرئي للنشر، تقام الجائزة على مستوى المملكة العربية السعودية.
+        </p>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="col-md-3 mb-4">
+        <h6 class="fw-bold fs-4 footer-title">عن الجائزة</h6>
+        <p class="small text-muted">
+          جائزة تحفيزية لأفضل إنتاج إعلامي مرئي للنشر، تقام الجائزة على مستوى المملكة العربية السعودية.
+        </p>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="col-md-3 mb-4">
+        <h6 class="fw-bold footer-title fs-4" >الفئة المستهدفة</h6>
+        <p class="small text-muted">
+          تشارك فيها الكيانات المهتمة بالإنتاج الإعلامي، بالإضافة للأفراد الموهوبين، وتكرم الجائزة الإنتاج المتميز من المتقدمين.
+        </p>
+      </div>
+
+      <!-- Column 4 -->
+      <div class="col-md-3 mb-4 footer-column">
+        <h6 class="footer-title fs-4">وسم الصبا</h6>
+        <ul class="footer-list">
+          <li><a href="/contact" class="footer-link">اتصل بنا</a></li>
+          <li><a href="/terms" class="footer-link">الشروط والأحكام</a></li>
+          <li><a href="/privacy" class="footer-link">سياسة الخصوصية</a></li>
+        </ul>
+      </div>
+      
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center small text-muted border-top pt-2 mt-3">
+      &copy; 2025 جميع الحقوق محفوظة لمؤسسة وسم الصبا المتكاملة التجارية
+    </div>
+  </div>
+</footer>
+
+
