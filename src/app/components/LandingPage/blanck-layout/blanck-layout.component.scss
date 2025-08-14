@@ -78,28 +78,11 @@
   background-color: #4683b4b6 !important; /* Steel Blue from badge 6, 54.9% opacity */
 
 }
-.footer-rtl {
-  direction: rtl;
-  text-align: right;
-}
 
-.footer-column {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* في RTL معناها يمين */
-}
 
-.footer-title {
-  margin-bottom: 0.5rem;
-  color: #0096A6; /* لون مميز للعناوين */
-  font-weight: bold;
-}
 
-.footer-list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
+
+
 
 .footer-link {
   color: #212529;
