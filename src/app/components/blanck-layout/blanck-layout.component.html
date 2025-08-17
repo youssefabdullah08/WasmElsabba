@@ -1,36 +1,4 @@
-<!-- Header -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg position-static py-2" style="backdrop-filter: blur(8px); background: rgba(255,255,255,0.95) !important;">
-  <div class="container justify-content-between">
-    <!-- Logo -->
-    <div>
-      <a class="navbar-brand fw-bold d-flex align-items-center" href="#home">
-        <img [src]="header.logo" alt="Logo" class="me-2" style="height: 48px; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.08));">
-      </a>
-    </div>
-    <!-- Toggle Button -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <!-- Menu -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto gap-2">
-        @for (item of menu; track item) {
-          <li class="nav-item">
-            <a class="nav-link px-3 rounded-pill fw-semibold transition" [href]="'#' + item.id" style="transition: background 0.2s, color 0.2s;">
-              {{ item.label }} 
-            </a>
-          </li>
-        }
-        <li>
-          <a href="https://admindemo.boniantech.com/wasm-elsabba/Account/RegisterUser" class="btn bg-sky rounded-pill px-4 py-2 fw-semibold shadow-sm" style="font-size: 1rem;"> شارك معنا</a>
-        </li>
-        <li>
-          <a href="#" class="btn btn-success btn-lg px-5 py-2 shadow rounded-pill" style="font-size: 1rem;">{{ hero.button }}</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<app-nav-bar/>
 
 <!-- Hero -->
 <section id="home" class="py-5 text-center vh-100 d-flex align-items-center justify-content-center bg-image position-relative" style="min-height: 600px;">
@@ -154,51 +122,6 @@
   </div>
 </section>
 
-<!-- CTA -->
-
-<!-- Footer -->
-<footer id="footer" class="bg-light text-center text-lg-start border-top pt-4 footer-rtl">
-  <div class="container">
-    <div class="row text-center text-md-end align-items-start">
-
-      <!-- Column 1 (Logo & About) -->
-      <div class="col-12 col-md-3 mb-4 text-md-end text-center">
-        <img src="./assets/Images/wasm alsiba Vertical PNG Logo.png" alt="Logo" class="mb-2" style="max-width: 120px;">
-        <p class="small text-muted mt-2">
-          جائزة تحفيزية لأفضل إنتاج إعلامي مرئي للنشر، تقام الجائزة على مستوى المملكة العربية السعودية.
-        </p>
-      </div>
-
-      <!-- Column 2 -->
-      <div class="col-12 col-md-3 mb-4">
-        <h6 class="fw-bold fs-4 text-sky">عن الجائزة</h6>
-        <p class="small text-muted">
-          جائزة تحفيزية لأفضل إنتاج إعلامي مرئي للنشر، تقام الجائزة على مستوى المملكة العربية السعودية.
-        </p>
-      </div>
-
-      <!-- Column 3 -->
-      <div class="col-12 col-md-3 mb-4">
-        <h6 class="fw-bold text-sky fs-4">الفئة المستهدفة</h6>
-        <p class="small text-muted">
-          تشارك فيها الكيانات المهتمة بالإنتاج الإعلامي، بالإضافة للأفراد الموهوبين، وتكرم الجائزة الإنتاج المتميز من المتقدمين.
-        </p>
-      </div>
-
-      <!-- Column 4 -->
-      <div class=" col-md-3 mb-4 footer-column">
-        <h6 class="text-sky fs-4">وسم الصبا</h6>
-        <p>
-          <a href="/contact" class="footer-link">اتصل بنا</a><br>
-          <a href="/terms" class="footer-link">الشروط والأحكام</a><br>
-          <a href="/privacy" class="footer-link">سياسة الخصوصية</a>
-        </p>
-      </div>
-    </div>
-
-    <!-- Copyright -->
-    <div class="text-center small text-muted border-top pt-2 mt-3">
-      &copy; 2025 جميع الحقوق محفوظة لمؤسسة وسم الصبا المتكاملة التجارية
-    </div>
-  </div>
-</footer>
+@defer{
+  <app-footer/>
+}

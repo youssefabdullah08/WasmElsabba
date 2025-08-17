@@ -1,37 +1,25 @@
 import { Component } from '@angular/core';
+import { NavBarComponent } from "../Shared/nav-bar/nav-bar.component";
+import { FooterComponent } from "../Shared/footer/footer.component";
 
 @Component({
   selector: 'app-blanck-layout',
   standalone: true,
-  imports: [],
+  imports: [NavBarComponent, FooterComponent],
   templateUrl: './blanck-layout.component.html',
   styleUrl: './blanck-layout.component.scss'
 })
 export class BlanckLayoutComponent {
 
-  hover:string="hover-effect-"
-  bg:string="bg-"
-  // Header
-  header = {
-    logo: './assets/Images/wasm alsiba Vertical PNG Logo.png',
-   
-  };
-  
-  menu = [
-    { label: 'الرئيسية', id: 'home' },
-    { label: 'الإحصائيات', id: 'stats' },
-    { label: 'الخدمات', id: 'services' },
-    { label: 'الخطوات', id: 'steps' },
-    { label: 'الأهداف', id: 'goals' },
-    { label: 'تواصل معنا', id: 'footer' }
-  ];
-  
+  hover: string = "hover-effect-"
+  bg: string = "bg-"
+
+
 
   // Hero
   hero = {
     title: 'نقود التحوّل نحو مستقبل أفضل',
     subtitle: 'حلول مبتكرة وخدمات استشارية لدعم أهدافكم الاستراتيجية',
-    button: 'صوت الآن',
     highlights: ['احترافية عالية', 'حلول مبتكرة', 'شراكات فاعلة']
   };
 

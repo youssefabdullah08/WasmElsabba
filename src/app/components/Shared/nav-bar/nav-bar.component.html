@@ -1,0 +1,33 @@
+<!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg position-static py-2" style="backdrop-filter: blur(8px); background: rgba(255,255,255,0.95) !important;">
+    <div class="container justify-content-between">
+      <!-- Logo -->
+      <div>
+        <a class="navbar-brand fw-bold d-flex align-items-center" href="#home">
+          <img [src]="header.logo" alt="Logo" class="me-2" style="height: 48px; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.08));">
+        </a>
+      </div>
+      <!-- Toggle Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Menu -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto gap-2">
+          @for (item of header.menu; track item) {
+            <li class="nav-item">
+              <a class="nav-link px-3 rounded-pill fw-semibold transition" [href]="'#' + item.id" style="transition: background 0.2s, color 0.2s;">
+                {{ item.label }} 
+              </a>
+            </li>
+          }
+          <li>
+            <a href="https://admindemo.boniantech.com/wasm-elsabba/Account/RegisterUser" class="btn bg-sky rounded-pill px-4 py-2 fw-semibold shadow-sm" style="font-size: 1rem;"> شارك معنا</a>
+          </li>
+          <li>
+            <a href="#" class="btn btn-success btn-lg px-5 py-2 shadow rounded-pill" style="font-size: 1rem;">{{ header.button }}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
