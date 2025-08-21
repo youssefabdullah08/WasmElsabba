@@ -1,0 +1,83 @@
+.bg-image{
+    background-image: url('/assets/Images/bg.jpg');
+    background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      width: 100%;
+      position: relative;
+      z-index: -1;
+  
+     
+  }
+  #home::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 253, 253, 0.4);
+      z-index: 0;
+    }
+    
+    #home .container {
+      position: relative;
+      z-index: 1;
+    }
+  
+  
+  
+    .effect {
+      transition: background-color 0.5s ease; /* smooth transition */
+    }
+    .hover-effect-1:hover {
+      background-color: #0093aa38; /* Light Orange from badge 5, 54.9% opacity */
+  }
+  
+  .hover-effect-2:hover {
+      background-color: #4683b443; /* Steel Blue from badge 6, 54.9% opacity */
+  }
+  
+  .hover-effect-3:hover {
+      background-color: #5abccb3b; /* Cyan from badge 7, 54.9% opacity */
+  }
+  
+  .hover-effect-4:hover {
+      background-color: #32cd323b; /* Green from badge 8, 54.9% opacity */
+  }
+  
+  .hover-effect-5:hover {
+      background-color: #9470db30; /* Purple from badge 9, 54.9% opacity */
+  }
+  
+  .hover-effect-6:hover {
+      background-color: #ff69b429; /* Hot Pink from badge 10, 54.9% opacity */
+  }
+  
+  .bg-0{
+    background-color: #5abccbce !important; /* Cyan from badge 7, 54.9% opacity */
+  
+  }
+  .bg-1{
+    background-color: #32cd32cd !important; /* Green from badge 8, 54.9% opacity */
+  
+  }
+  .bg-2{
+    background-color: #9470dbd0 !important; /* Purple from badge 9, 54.9% opacity */
+  
+  }
+  .bg-3{
+    background-color: #ff69b4d7 !important; /* Hot Pink from badge 10, 54.9% opacity */
+  
+  }
+  .bg-4{
+    background-color: #4683b4b6 !important; /* Steel Blue from badge 6, 54.9% opacity */
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  

@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-
+import { Component, HostListener } from '@angular/core';
 @Component({
   selector: 'app-nav-bar',
   standalone: true,
@@ -9,18 +8,13 @@ import { Component } from '@angular/core';
 })
 export class NavBarComponent {
   // Header
-  header = {
-    logo: './assets/Images/wasm alsiba Vertical PNG Logo.png',
-    button: 'صوت الآن',
-    menu : [ 
-      { label: 'الرئيسية', id: 'home' },
-      { label: 'الإحصائيات', id: 'stats' },
-      { label: 'الخدمات', id: 'services' },
-      { label: 'الخطوات', id: 'steps' },
-      { label: 'الأهداف', id: 'goals' },
-      { label: 'تواصل معنا', id: 'footer' }
-    ]
-  };
-  
+ 
+  isScrolled = false;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.isScrolled = window.scrollY > 50;
+  } 
+
 
 }
