@@ -1,49 +1,86 @@
 <header [class.move]="isScrolled">
   <div class="container-fluid">
-      <div class="row">
-          <div class="col-12 d-flex align-items-center justify-content-between ">
-              <a  class="logo">
-                  <img src="./assets/Images/logo.svg" alt="">
-              </a>
-              <div class="btns">
-                  <a href="https://admindemo.boniantech.com/wasm-elsabba/Account/RegisterUser" class="link">
-                      + شارك
-                  </a>
-                  <a href="" class="link">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M18 13L21 16V20C21 21.11 20.1 22 19 22H5C3.89 22 3 21.1 3 20V16L6 13H6.83L8.83 15H6.78L5 17H19L17.23 15H15.32L17.32 13H18ZM19 20V19H5V20H19ZM11.34 15L6.39 10.07C6 9.67998 6 9.04998 6.39 8.65998L12.76 2.28998C13.15 1.89998 13.78 1.89998 14.16 2.29998L19.11 7.24998C19.5 7.63998 19.5 8.26998 19.11 8.65998L12.75 15C12.36 15.41 11.73 15.41 11.34 15ZM13.46 4.40998L8.5 9.35998L12.05 12.9L17 7.94998L13.46 4.40998Z" fill="#fff"></path>
-                      </svg>
-
-                      صوت
-                  </a>
-
-                  <a href="" class="icon_link lang">
-                      <i>EN</i>
-                  </a>
-                  <button class="icon menu_btn" data-toggle="collapse" type="button" data-target="#main-nav">
-                      <i class="fa fa-bars"></i>
-                  </button>
-              </div>
-
-          </div>
+    <div class="row align-items-center">
+      <div class="col-6 col-md-3 d-flex align-items-center">
+        <a class="logo d-block">
+          <img src="./assets/Images/logo.svg" alt="" class="img-fluid" />
+        </a>
       </div>
+      <div class="col-6 col-md-9 d-flex justify-content-end align-items-center">
+        <div class="btns d-flex align-items-center">
+          <a href="https://admindemo.boniantech.com/wasm-elsabba/Account/RegisterUser" class="link d-none d-md-inline-block mx-1">
+            + شارك
+          </a>
+          <a href="" class="link d-none d-md-inline-block mx-1">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M18 13L21 16V20C21 21.11 20.1 22 19 22H5C3.89 22 3 21.1 3 20V16L6 13H6.83L8.83 15H6.78L5 17H19L17.23 15H15.32L17.32 13H18ZM19 20V19H5V20H19ZM11.34 15L6.39 10.07C6 9.67998 6 9.04998 6.39 8.65998L12.76 2.28998C13.15 1.89998 13.78 1.89998 14.16 2.29998L19.11 7.24998C19.5 7.63998 19.5 8.26998 19.11 8.65998L12.75 15C12.36 15.41 11.73 15.41 11.34 15ZM13.46 4.40998L8.5 9.35998L12.05 12.9L17 7.94998L13.46 4.40998Z"
+                fill="#fff"></path>
+            </svg>
+            صوت
+          </a>
+          <a href="" class="icon_link lang d-none d-md-inline-block mx-1">
+            <i>EN</i>
+          </a>
+          <button class="icon menu_btn d-inline-block d-md-none ms-2" type="button" data-bs-toggle="collapse"
+            data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
-  <nav class="navbar navbar-expand-lg" >
-      <div class="container">
-          <div class="row w-100">
-              <div class="col-12">
-                  <div class="collapse navbar-collapse" id="main-nav">
-                      <ul class="navbar-nav">
-                          <li> <a class="active nav-link" href=""> الرئيسية </a> </li>
-                          <li><a class="nav-link" href="">عن الجائزة </a></li>
-                          <li><a class="nav-link" href=""> مسارات وجوائز </a></li>
-                          <li><a class="nav-link" href=""> موضوعات </a></li>
-                          <li><a class="nav-link" href=""> المراحل </a></li>
-                          <li><a class="nav-link" href=""> الشروط والاحكام</a></li>
-                      </ul>
-                  </div>
-              </div>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <div class="row w-100">
+        <div class="col-12">
+          <div class="collapse navbar-collapse" id="main-nav">
+            <ul class="navbar-nav w-100 d-flex justify-content-center">
+              <li class="nav-item">
+                <a class="active nav-link" href=""> الرئيسية </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">عن الجائزة </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href=""> مسارات وجوائز </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href=""> موضوعات </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href=""> المراحل </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href=""> الشروط والاحكام</a>
+              </li>
+              <!-- Mobile-only quick links inside dropdown -->
+              <li class="nav-item d-md-none mt-2">
+                <a href="https://admindemo.boniantech.com/wasm-elsabba/Account/RegisterUser" class="link my-1 w-100 d-block text-end">
+                  + شارك
+                </a>
+              </li>
+              <li class="nav-item d-md-none">
+                <a href="" class="link my-1 w-100 d-block text-end">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M18 13L21 16V20C21 21.11 20.1 22 19 22H5C3.89 22 3 21.1 3 20V16L6 13H6.83L8.83 15H6.78L5 17H19L17.23 15H15.32L17.32 13H18ZM19 20V19H5V20H19ZM11.34 15L6.39 10.07C6 9.67998 6 9.04998 6.39 8.65998L12.76 2.28998C13.15 1.89998 13.78 1.89998 14.16 2.29998L19.11 7.24998C19.5 7.63998 19.5 8.26998 19.11 8.65998L12.75 15C12.36 15.41 11.73 15.41 11.34 15ZM13.46 4.40998L8.5 9.35998L12.05 12.9L17 7.94998L13.46 4.40998Z"
+                      fill="#fff"></path>
+                  </svg>
+                  صوت
+                </a>
+              </li>
+              <li class="nav-item d-md-none">
+                <a href="" class="icon_link lang my-1  d-block text-end">
+                  <i>EN</i>
+                </a>
+              </li>
+            </ul>
           </div>
+        </div>
       </div>
+    </div>
   </nav>
 </header>
