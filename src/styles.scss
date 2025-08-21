@@ -245,7 +245,7 @@ header {
     left: 0;
     width: 100%;
     z-index: 9998;
-    background-color: transparent;
+    background-color: var(--main_color);
     transition: 0.4s linear all;
     border-bottom: 1px solid #0001;
     min-height: 80px;
@@ -253,17 +253,13 @@ header {
 
 header .container-fluid {
     max-width: 1480px;
-    .nav-link{
-        color: #000 !important;
-    }
+    
 }
 
 header.move {
     background-color: var(--black_color) !important;
     top: 0;
-    .nav-link{
-        color:#e7e7e7 !important;
-    }
+  
 }
 
 
@@ -897,7 +893,7 @@ footer {
     position: relative;
     padding: 50px 0 70px;
     border-top: 1px solid #fff4 !important;
-    background: url(/assets/Images/bg.jpg) no-repeat center;
+    background: url(/assets/Images/bc.jpg) no-repeat center;
     background-size: cover;
 }
 
