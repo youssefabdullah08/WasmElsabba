@@ -1,4 +1,4 @@
-<header [class.move]="isScrolled">
+<header [class.move]="isScrolled" >
   <div class="container-fluid">
     <div class="row align-items-center">
       <div class="col-6 col-md-3 d-flex align-items-center">
@@ -36,35 +36,35 @@
       <div class="row w-100">
         <div class="col-12">
           <div class="collapse navbar-collapse" id="main-nav">
-            <ul class="navbar-nav w-100 d-flex justify-content-center">
+            <ul class="navbar-nav w-100 d-flex justify-content-center ">
               <li class="nav-item">
-                <a class="active nav-link" href=""> الرئيسية </a>
+                <a class="line nav-link" href="" [ngClass]="{'text-dark': !isScrolled}"> الرئيسية </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">عن الجائزة </a>
+                <a class="nav-link" href="" [ngClass]="{'text-dark': !isScrolled}">عن الجائزة </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href=""> مسارات وجوائز </a>
+                <a class="nav-link" href="" [ngClass]="{'text-dark': !isScrolled}"> مسارات وجوائز </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href=""> موضوعات </a>
+                <a class="nav-link" href="" [ngClass]="{'text-dark': !isScrolled}"> موضوعات </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href=""> المراحل </a>
+                <a class="nav-link" href="" [ngClass]="{'text-dark': !isScrolled}"> المراحل </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href=""> الشروط والاحكام</a>
+                <a class="nav-link" href="" [ngClass]="{'text-dark': !isScrolled}"> الشروط والاحكام</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href=""> اعرف اكتر</a>
+                <a class="nav-link" href="" [ngClass]="{'text-dark': !isScrolled}"> اعرف اكتر</a>
               </li>
               <!-- Mobile-only quick links inside dropdown -->
-              <li class="nav-item d-md-none mt-2">
+              <li class="nav-item d-md-none mt-2" >
                 <a href="https://admindemo.boniantech.com/wasm-elsabba/Account/RegisterUser" class="link my-1 w-100 d-block text-end">
                   + شارك
                 </a>
               </li>
-              <li class="nav-item d-md-none">
+              <li class="nav-item d-md-none" >
                 <a href="" class="link my-1 w-100 d-block text-end">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -75,7 +75,7 @@
                   صوت
                 </a>
               </li>
-              <li class="nav-item d-md-none">
+              <li class="nav-item d-md-none" >
                 <a href="" class="icon_link lang my-1  d-block text-end">
                   <i>EN</i>
                 </a>

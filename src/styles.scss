@@ -245,7 +245,7 @@ header {
     left: 0;
     width: 100%;
     z-index: 9998;
-    background-color: var(--main_color);
+    background-color: transparent;
     transition: 0.4s linear all;
     border-bottom: 1px solid #0001;
     min-height: 80px;
@@ -394,7 +394,7 @@ header .navbar ul li a.active {
     color: #fff !important ;
 }
 
-header .navbar ul li a.active::before {
+header .navbar ul li a.line::before {
     content: "";
     position: absolute;
     bottom: -2px;

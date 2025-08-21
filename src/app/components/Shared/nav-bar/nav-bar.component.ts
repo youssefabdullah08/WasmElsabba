@@ -1,8 +1,9 @@
+import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 @Component({
   selector: 'app-nav-bar',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss'
 })
