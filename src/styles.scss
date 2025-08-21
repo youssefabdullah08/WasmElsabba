@@ -670,7 +670,13 @@ section {
     background-attachment: fixed;
 }
 
-    
+@media (max-width: 767.98px) {
+    .main_section {
+        background-position: right center;
+    }
+}
+
+
 
 .intro {
     position: relative;
